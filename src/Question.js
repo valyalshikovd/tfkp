@@ -6,7 +6,7 @@ const Question = (props) => {
     return (
         <div>
             <div>
-                process.env.PUBLIC_URL
+                {process.env.PUBLIC_URL}
             </div>
             <img src={imageUrl + photoPath + ".png"} alt={imageUrl + photoPath + ".png"}  />
         </div>
