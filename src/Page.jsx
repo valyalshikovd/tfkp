@@ -31,7 +31,7 @@ const Page = (props) => {
                 }
                 const data = await response.json();
                 setObjectEntries(data)
-                console.log('читает')
+
             } catch (error) {
                 console.error('Ошибка при загрузке файла JSON:', error);
             }
