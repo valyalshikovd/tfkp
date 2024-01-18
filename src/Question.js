@@ -5,7 +5,7 @@ const Question = (props) => {
     const imageUrl = process.env.PUBLIC_URL + '/questions/q';
     return (
         <div>
-            <img src={imageUrl + photoPath + ".png"} alt={imageUrl + photoPath + ".png"} />
+            <img src={imageUrl + photoPath + ".png"} alt={imageUrl + photoPath + ".png"}  />
         </div>
     );
 };
