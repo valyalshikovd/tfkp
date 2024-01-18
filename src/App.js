@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useCallback, useEffect, useRef, useState} from "react";
+import Button from '@mui/material/Button';
+import Page from "./Page";
+
+
 
 function App() {
+    const [mode , setMode] = useState(3);
+    const [isChoised, setChoised] = useState(false)
+    function modeChange(mode) {
+        setMode(mode)
+        setChoised(true)
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        { isChoised ?
+            <div>
+                <Page mode={mode}></Page>
+            </div>
+            :
+        <div>
+            <Button onClick={ () => modeChange(1)}>на 3</Button>
+            <Button onClick={ () => modeChange(2)}>на 4</Button>
+            <Button onClick={ () => modeChange(3)}>Все</Button>
+        </div>
+        }
+
     </div>
   );
 }
