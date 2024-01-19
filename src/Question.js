@@ -2,7 +2,7 @@ import React from 'react';
 
 const Question = (props) => {
     const { photoPath, altText } = props;
-    const imageUrl = '/public/static' + '/questions/q';
+    const imageUrl = 'public/static' + '/questions/q';
     return (
         <div>
             <div>
