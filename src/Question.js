@@ -2,7 +2,7 @@ import React from 'react';
 
 const Question = (props) => {
     const { photoPath, altText } = props;
-    const imageUrl = process.env.PUBLIC_URL + '/questions/q';
+    const imageUrl = '/public/static' + '/questions/q';
     return (
         <div>
             <div>
