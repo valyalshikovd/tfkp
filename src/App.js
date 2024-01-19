@@ -22,7 +22,7 @@ function App() {
         <div>
             <Button onClick={ () => modeChange(1)}>на 3</Button>
             <Button onClick={ () => modeChange(2)}>на 4</Button>
-            <Button onClick={ () => modeChange(3)}>Все</Button>
+            
         </div>
         }
 
