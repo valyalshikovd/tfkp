@@ -8,7 +8,7 @@ const Question = (props) => {
             <div>
                 {imageUrl + photoPath + ".PNG"}
             </div>
-            <img src=/questions/q19.PNG alt={imageUrl + photoPath + ".PNG"}  />
+            <img src="/questions/q19.PNG" alt={imageUrl + photoPath + ".PNG"}  />
         </div>
     );
 };
