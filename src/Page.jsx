@@ -48,20 +48,26 @@ const Page = (props) => {
     }
     return (
         <div>
-            <div>
                 {objectEntries != null ? <div>
-                    {key}
-                    {!hidePhoto ?
+                    {(key !== null) ?
                         <div>
-                            <Button onClick={() => setHidePhoto(true)}>Показать ответ</Button>
-                        </div> :
-                         <Question photoPath={objectEntries[key]} altText="Описание фотографии"/>
-                    }
-                </div> : <div>
-                </div>}
-                <Button onClick={() => getKey()}>Следующий</Button>
-
-            </div>
+                            {key}
+                            {(!hidePhoto) ?
+                                <div>
+                                    <Button onClick={() => setHidePhoto(true)}>Показать ответ</Button>
+                                </div>
+                                :
+                                <Question photoPath={objectEntries[key]} altText="Описание фотографии"/>
+                            }
+                            <Button onClick={() => getKey()}>Следующий</Button>
+                        </div>
+                        :
+                        <div>
+                            <Button onClick={() => getKey()}>Начать</Button>
+                        </div>
+                    }</div>
+                    : <div></div>
+                }
         </div>
     );
 };
